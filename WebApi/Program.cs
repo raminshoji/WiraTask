@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IWeatherService, WeatherService>();
-builder.Services.AddScoped<OpenWeatherApiClient>();
+builder.Services.AddScoped<IOpenWeatherApiClient,OpenWeatherApiClient>();
 
 builder.Services.AddAutoMapper(cfg =>
 {
